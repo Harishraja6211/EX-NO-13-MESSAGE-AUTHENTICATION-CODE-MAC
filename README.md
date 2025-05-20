@@ -1,30 +1,28 @@
 # EX-NO-13-MESSAGE-AUTHENTICATION-CODE-MAC
 
-## Aim:
+## AIM:
+To implement MESSAGE AUTHENTICATION CODE(MAC)
 
-To implement MESSAGE AUTHENTICATION CODE(MAC).
-
-## Algorithm:
+## ALGORITHM:
 
 1. Message Authentication Code (MAC) is a cryptographic technique used to verify the integrity and authenticity of a message by using a secret key.
 
 2. Initialization:
-
-   - Choose a cryptographic hash function ( H ) (e.g., SHA-256) and a secret key ( K ).
-
-   - The message ( M ) to be authenticated is input along with the secret key ( K ).
+   - Choose a cryptographic hash function \( H \) (e.g., SHA-256) and a secret key \( K \).
+   - The message \( M \) to be authenticated is input along with the secret key \( K \).
 
 3. MAC Generation:
-
-   - Compute the MAC by applying the hash function to the combination of the message ( M ) and the secret key ( K ): [ \text{MAC}(M, K) = H(K || M) ] where ( || ) denotes concatenation of ( K ) and ( M ).
+   - Compute the MAC by applying the hash function to the combination of the message \( M \) and the secret key \( K \): 
+     \[
+     \text{MAC}(M, K) = H(K || M)
+     \]
+     where \( || \) denotes concatenation of \( K \) and \( M \).
 
 4. Verification:
-
-   - The recipient, who knows the secret key ( K ), computes the MAC using the received message ( M ) and the same hash function.
-
+   - The recipient, who knows the secret key \( K \), computes the MAC using the received message \( M \) and the same hash function.
    - The recipient compares the computed MAC with the received MAC. If they match, the message is authentic and unchanged.
 
-5. Security: The security of the MAC relies on the secret key ( K ) and the strength of the hash function ( H ), ensuring that an attacker cannot forge a valid MAC without knowledge of the key.
+5. Security: The security of the MAC relies on the secret key \( K \) and the strength of the hash function \( H \), ensuring that an attacker cannot forge a valid MAC without knowledge of the key.
 
 ## Program:
 ```
@@ -86,11 +84,10 @@ int main() {
 ```
 
 
-## Output:
 
-![image](https://github.com/user-attachments/assets/0c976a5c-84c2-47bd-a9ce-a9786b58c96d)
+## Output:
+![Screenshot 2025-05-10 113935](https://github.com/user-attachments/assets/f40c438d-7ebd-4509-8f37-bd272f75694c)
+
 
 ## Result:
-
 The program is executed successfully.
-
